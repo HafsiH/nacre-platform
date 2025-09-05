@@ -56,5 +56,10 @@ conv_id.txt
 db/*.json
 storage/db/*.json
 
+# Large index files (generated at runtime)
+**/nacre_index.json
+data/nacre_index.json
+backend/data/nacre_index.json
+
 # Test data (optional - uncomment to exclude)
 # test_data/
