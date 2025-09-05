@@ -330,47 +330,68 @@ def _run_conversion(conv_id: str, upload_path: str, payload: ConversionCreate):
 
 @router.post("", response_model=ConversionStatus)
 def start_conversion(payload: ConversionCreate, background: BackgroundTasks):
-    up = get_upload(payload.upload_id)
-    if not up:
-        raise HTTPException(status_code=404, detail="Upload introuvable")
-    conv = create_conversion(upload_id=payload.upload_id, meta=payload.model_dump())
+    try:
+        print(f"🚀 Starting conversion for upload: {payload.upload_id}")
+        up = get_upload(payload.upload_id)
+        if not up:
+            print(f"❌ Upload not found: {payload.upload_id}")
+            raise HTTPException(status_code=404, detail="Upload introuvable")
+        
+        print(f"📁 Upload found: {up['filename']}, path: {up['path']}")
+        conv = create_conversion(upload_id=payload.upload_id, meta=payload.model_dump())
+        print(f"✅ Conversion created: {conv['id']}")
 
-    path = up["path"]
-    ext = path.lower()
+        path = up["path"]
+        ext = path.lower()
 
-    # Pre-count total rows for progress reporting
-    if ext.endswith(".csv"):
-        total_rows = count_csv_rows(path)
-    elif ext.endswith(".xlsx"):
-        total_rows = count_xlsx_rows(path)
-    else:
-        raise HTTPException(status_code=400, detail="Format non supporté (CSV/XLSX)")
-    if payload.max_rows:
-        total_rows = min(total_rows, payload.max_rows)
-    update_conversion(conv["id"], {"status": "running", "total_rows": total_rows, "processed_rows": 0})
+        # Pre-count total rows for progress reporting
+        if ext.endswith(".csv"):
+            total_rows = count_csv_rows(path)
+        elif ext.endswith(".xlsx"):
+            total_rows = count_xlsx_rows(path)
+        else:
+            raise HTTPException(status_code=400, detail="Format non supporté (CSV/XLSX)")
+        
+        if payload.max_rows:
+            total_rows = min(total_rows, payload.max_rows)
+        
+        print(f"📊 Total rows to process: {total_rows}")
+        update_conversion(conv["id"], {"status": "running", "total_rows": total_rows, "processed_rows": 0})
 
-    # Utiliser le nouveau traitement parallèle avec agents multiples
-    background.add_task(_run_conversion_parallel, conv["id"], path, payload)
+        # Utiliser le nouveau traitement parallèle avec agents multiples
+        print(f"🔄 Starting background task for conversion: {conv['id']}")
+        background.add_task(_run_conversion_parallel, conv["id"], path, payload)
 
-    now = get_conversion(conv["id"]) or {}
-    return ConversionStatus(
-        conversion_id=now.get("id"),
-        upload_id=now.get("upload_id"),
-        total_rows=now.get("total_rows", 0),
-        processed_rows=now.get("processed_rows", 0),
-        status=now.get("status", "unknown"),
-        stats=now.get("stats", {}),
-    )
+        now = get_conversion(conv["id"]) or {}
+        print(f"✅ Conversion started successfully: {now.get('id')}")
+        return ConversionStatus(
+            conversion_id=now.get("id"),
+            upload_id=now.get("upload_id"),
+            total_rows=now.get("total_rows", 0),
+            processed_rows=now.get("processed_rows", 0),
+            status=now.get("status", "unknown"),
+            stats=now.get("stats", {}),
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"❌ Error starting conversion: {e}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Erreur lors du démarrage: {str(e)}")
 
 
 def _run_conversion_parallel(conv_id: str, upload_path: str, payload: ConversionCreate):
     """Nouvelle fonction de traitement parallèle avec agents multiples"""
-    nacre = get_nacre_dict()
-    start_time = time.time()
-    
-    print(f"🚀 Démarrage traitement parallèle pour conversion {conv_id}")
-    
     try:
+        print(f"🚀 Démarrage traitement parallèle pour conversion {conv_id}")
+        print(f"📁 Fichier: {upload_path}")
+        print(f"⚙️ Payload: {payload.model_dump()}")
+        
+        nacre = get_nacre_dict()
+        start_time = time.time()
+        
+        print(f"📚 Dictionnaire NACRE chargé: {len(nacre.entries)} entrées")
         # Préparer tous les éléments à traiter
         all_items = []
         stats = {"skipped_empty_label": 0, "errors": 0}
@@ -497,9 +518,14 @@ def _run_conversion_parallel(conv_id: str, upload_path: str, payload: Conversion
             pass
             
     except Exception as e:
-        update_conversion(conv_id, {"status": "error", "error": str(e)})
-        print(f"❌ Erreur traitement parallèle: {e}")
-        raise
+        print(f"❌ ERREUR CRITIQUE dans traitement parallèle: {e}")
+        import traceback
+        traceback.print_exc()
+        try:
+            update_conversion(conv_id, {"status": "error", "error": str(e)})
+        except Exception as update_error:
+            print(f"❌ Erreur lors de la mise à jour du statut d'erreur: {update_error}")
+        # Don't re-raise in background task, just log the error
 
 
 def _run_conversion_any(conv_id: str, upload_path: str, payload: ConversionCreate):
@@ -639,17 +665,29 @@ def clear_conversion_history():
 
 @router.get("/{conversion_id}", response_model=ConversionStatus)
 def get_status(conversion_id: str):
-    conv = get_conversion(conversion_id)
-    if not conv:
-        raise HTTPException(status_code=404, detail="Conversion introuvable")
-    return ConversionStatus(
-        conversion_id=conv.get("id"),
-        upload_id=conv.get("upload_id"),
-        total_rows=conv.get("total_rows", 0),
-        processed_rows=conv.get("processed_rows", 0),
-        status=conv.get("status", "unknown"),
-        stats=conv.get("stats", {}),
-    )
+    try:
+        print(f"🔍 Getting status for conversion: {conversion_id}")
+        conv = get_conversion(conversion_id)
+        if not conv:
+            print(f"❌ Conversion not found: {conversion_id}")
+            raise HTTPException(status_code=404, detail=f"Conversion introuvable: {conversion_id}")
+        
+        print(f"✅ Found conversion: status={conv.get('status')}, processed={conv.get('processed_rows', 0)}/{conv.get('total_rows', 0)}")
+        return ConversionStatus(
+            conversion_id=conv.get("id"),
+            upload_id=conv.get("upload_id"),
+            total_rows=conv.get("total_rows", 0),
+            processed_rows=conv.get("processed_rows", 0),
+            status=conv.get("status", "unknown"),
+            stats=conv.get("stats", {}),
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"❌ Error getting conversion status: {e}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Erreur serveur: {str(e)}")
 
 
 @router.get("/{conversion_id}/rows", response_model=ConversionResult)
