@@ -1,0 +1,556 @@
+{
+  "session_count": 156,
+  "last_session": 1757089823.65787,
+  "user_interactions": [
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "3d817436"
+      },
+      "timestamp": 1757077719.6751175
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "1a00f7a3"
+      },
+      "timestamp": 1757077721.7501068
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "d7341640"
+      },
+      "timestamp": 1757077790.0189674
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "ad454c23"
+      },
+      "timestamp": 1757077792.9217303
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "e8f77b9a"
+      },
+      "timestamp": 1757079250.2075324
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "6dd4ff5b"
+      },
+      "timestamp": 1757079250.6416278
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "b2086923"
+      },
+      "timestamp": 1757079250.9498289
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "71b13025"
+      },
+      "timestamp": 1757079252.261693
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "59af3a8a"
+      },
+      "timestamp": 1757079252.336365
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "82696971"
+      },
+      "timestamp": 1757079259.2609005
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "390d2357"
+      },
+      "timestamp": 1757079260.7255883
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "7c76fb76"
+      },
+      "timestamp": 1757079262.209111
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "e9911787"
+      },
+      "timestamp": 1757079263.685891
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "db11e6fe"
+      },
+      "timestamp": 1757079265.085813
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "e32ebff6"
+      },
+      "timestamp": 1757079266.5336914
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "bfe2e930"
+      },
+      "timestamp": 1757079267.7795045
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "363a3d27"
+      },
+      "timestamp": 1757079467.665255
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "270d1eb1"
+      },
+      "timestamp": 1757079469.3760955
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "57735a7b"
+      },
+      "timestamp": 1757079992.2185018
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "44057846"
+      },
+      "timestamp": 1757079994.0060349
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "f733c181"
+      },
+      "timestamp": 1757079996.2170994
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "22ff4c03"
+      },
+      "timestamp": 1757079997.989315
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "e21d196f"
+      },
+      "timestamp": 1757079999.638816
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "e65f9338"
+      },
+      "timestamp": 1757080001.0786972
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "2b9bf3b5"
+      },
+      "timestamp": 1757080003.2026563
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "c9185021"
+      },
+      "timestamp": 1757080007.2306778
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "1dbfa8ca"
+      },
+      "timestamp": 1757080008.6199121
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "075aab09"
+      },
+      "timestamp": 1757080050.1688373
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "454e2985"
+      },
+      "timestamp": 1757080051.462889
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "d3bf967e"
+      },
+      "timestamp": 1757080052.7167504
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "f70ba2dc"
+      },
+      "timestamp": 1757080054.0493832
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "d8355df2"
+      },
+      "timestamp": 1757080055.5407383
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "cea2c29d"
+      },
+      "timestamp": 1757080807.3458104
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "047ed589"
+      },
+      "timestamp": 1757080810.5297048
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "7808748e"
+      },
+      "timestamp": 1757080814.0587223
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "c01ea30a"
+      },
+      "timestamp": 1757080814.60792
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "df627b00"
+      },
+      "timestamp": 1757080816.0629246
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "70f70ed4"
+      },
+      "timestamp": 1757081202.9841323
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "5753bc0e"
+      },
+      "timestamp": 1757081218.0030227
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "5ef2265b"
+      },
+      "timestamp": 1757081219.5090795
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "d66e71cd"
+      },
+      "timestamp": 1757081224.4860811
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "dd5e1421"
+      },
+      "timestamp": 1757081225.9242916
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "412bf2a8"
+      },
+      "timestamp": 1757081227.1502829
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "98c6dc92"
+      },
+      "timestamp": 1757081358.5492942
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "76473350"
+      },
+      "timestamp": 1757081360.1261604
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "dc573109"
+      },
+      "timestamp": 1757081361.4521074
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "875351bd"
+      },
+      "timestamp": 1757085204.8150663
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "f4ded153"
+      },
+      "timestamp": 1757085206.755709
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "91087393"
+      },
+      "timestamp": 1757089823.6470208
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "12678c70"
+      },
+      "timestamp": 1757089825.3869936
+    }
+  ],
+  "file_memory": {
+    "nacre_dict_available": true,
+    "embeddings_status": {
+      "ready": true,
+      "in_progress": false,
+      "total": 1574,
+      "done": 1574,
+      "model": "text-embedding-3-large",
+      "last_built_at": 1757066951.4274127,
+      "dict_path": "C:\\Users\\hamza\\Desktop\\nacre-platform\\backend\\app\\services\\nacre_dictionary_with_emissions.csv",
+      "dict_mtime": 1757066865.9997454,
+      "source": "loaded"
+    },
+    "document_access": "<app.services.document_access.DocumentAccess object at 0x0000029ACD33EE40>"
+  },
+  "system_context": {
+    "sophie_status": {
+      "name": "Sophie",
+      "model": "gpt-4o-mini",
+      "events": 0,
+      "enabled": true
+    },
+    "timestamp": 1757089823.6578655
+  },
+  "learning_history": [],
+  "introduction_variations": [
+    {
+      "text": "Bonjour, et bienvenue à nouveau dans votre session NACRE. Vous êtes de retour immédiatement après votre dernière interaction, ce qui témoigne de votre engagement dans l'exploration de nos fonctionnalités. N'hésitez pas à me faire part de vos questions ou de vos besoins spécifiques pour cette session.",
+      "hash": "f70ba2dc",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757080054.0456204
+    },
+    {
+      "text": "Bonjour et bienvenue à votre session 138. Je constate que vous êtes de retour immédiatement après votre dernière interaction, ce qui témoigne de votre engagement envers l'utilisation de nos ressources. N'hésitez pas à me faire part de vos questions ou de vos besoins concernant les fichiers et le dictionnaire NACRE disponibles.",
+      "hash": "d8355df2",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757080055.5370455
+    },
+    {
+      "text": "Bonjour, et bienvenue à nouveau. Vous êtes de retour pour cette session 139, avec vos fichiers déjà chargés et les embeddings prêts à l'emploi. Je suis à votre disposition pour toute question ou pour explorer davantage le contenu disponible.",
+      "hash": "cea2c29d",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757080807.3420324
+    },
+    {
+      "text": "Bonjour, et bienvenue de nouveau dans votre session 140. Étant donné que vous êtes de retour immédiatement après votre dernière interaction, je suis prête à vous assister avec les fichiers disponibles et les fonctionnalités en cours. N'hésitez pas à me faire part de vos besoins ou questions pour que nous puissions avancer ensemble.",
+      "hash": "047ed589",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757080810.5258613
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 141. Vous êtes de retour parmi nous, et toutes vos données sont prêtes pour une exploration approfondie. N'hésitez pas à me faire part de vos besoins ou questions pour que nous puissions avancer ensemble efficacement.",
+      "hash": "7808748e",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757080814.054866
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session numéro 142. Vous êtes de retour après un court instant, avec trois fichiers en mémoire et vos embeddings complètement prêts à l'emploi. Je vous invite à me faire part de vos besoins ou questions afin que nous puissions avancer ensemble.",
+      "hash": "c01ea30a",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757080814.6042893
+    },
+    {
+      "text": "Bonjour, et bienvenue à nouveau. Vous êtes de retour pour cette session numéro 143, où nous avons trois fichiers en mémoire et une bonne progression dans les embeddings. Je vous invite à explorer vos besoins ou questions, afin que nous puissions avancer ensemble efficacement.",
+      "hash": "df627b00",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757080816.0592566
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 144. Vous êtes de retour après une courte pause et avez trois fichiers en mémoire, ce qui témoigne de votre utilisation régulière. N'hésitez pas à me faire part de vos questions ou besoins concernant les données disponibles, je suis ici pour vous aider.",
+      "hash": "70f70ed4",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757081202.980978
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 145. Vous êtes de retour très rapidement, ce qui témoigne de votre engagement dans l'exploration des fonctionnalités disponibles, notamment avec les fichiers chargés et les embeddings prêts à l'emploi. Je vous invite à me faire part de vos besoins ou questions pour que nous puissions avancer ensemble dans vos projets.",
+      "hash": "5753bc0e",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757081217.9992301
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 146. Je constate que vous êtes de retour après un court laps de temps, avec trois fichiers en mémoire et plusieurs interactions récentes. N'hésitez pas à me faire part de vos besoins ou questions concernant le dictionnaire NACRE ou tout autre sujet que vous souhaitez explorer.",
+      "hash": "5ef2265b",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757081219.5052745
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 147. Je constate que vous êtes de retour immédiatement après votre dernière interaction et que vous disposez de trois fichiers en mémoire. N'hésitez pas à me faire part de vos questions ou des sujets que vous souhaitez explorer davantage.",
+      "hash": "d66e71cd",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757081224.4823866
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 148. Vous êtes de retour parmi nous juste après votre dernière interaction, avec trois fichiers en mémoire et un modèle d'embeddings prêt à l'emploi. N'hésitez pas à me faire part de vos besoins ou questions pour cette session.",
+      "hash": "dd5e1421",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757081225.920865
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 149. Vous êtes de retour après une brève pause, avec trois fichiers disponibles et un historique d'interactions enrichissant. Je vous invite à poursuivre vos explorations ou à poser toute question que vous pourriez avoir concernant la classification NACRE.",
+      "hash": "412bf2a8",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757081227.1468916
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre 150ème session. Vous êtes de retour après une très courte pause, et j'ai à votre disposition les fichiers nécessaires ainsi que les embeddings prêts pour vos analyses. N'hésitez pas à me faire part de vos besoins ou questions pour que nous puissions avancer ensemble efficacement.",
+      "hash": "98c6dc92",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757081358.5465887
+    },
+    {
+      "text": "Bonjour et bienvenue de nouveau. Vous êtes de retour dans cette session 151, et tous vos fichiers sont prêts à être exploités. N'hésitez pas à me faire part de vos besoins ou questions pour que nous puissions avancer ensemble.",
+      "hash": "76473350",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757081360.123598
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session. Je constate que vous êtes de retour immédiatement après votre dernière interaction et que vous avez accès à plusieurs fichiers dans notre système. N'hésitez pas à me faire part de vos questions ou besoins spécifiques pour que nous puissions avancer ensemble efficacement.",
+      "hash": "dc573109",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757081361.4498951
+    },
+    {
+      "text": "Bonjour, je vous souhaite la bienvenue à nouveau pour cette session 153. Je constate que vous avez accès à votre dictionnaire NACRE et que toutes les embeddings sont prêtes pour une utilisation immédiate. N'hésitez pas à me faire part de vos questions ou de vos besoins spécifiques pour que nous puissions avancer efficacement ensemble.",
+      "hash": "875351bd",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757085204.8101947
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 154. Je constate que vous êtes de retour immédiatement après votre dernière interaction et que trois fichiers sont actuellement en mémoire, y compris le dictionnaire NACRE. N'hésitez pas à me faire part de vos questions ou des sujets que vous souhaitez aborder aujourd'hui.",
+      "hash": "f4ded153",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757085206.7539003
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 155. Je constate que vous êtes de retour après un court laps de temps et que trois fichiers sont déjà en mémoire, ce qui montre votre engagement. N'hésitez pas à me faire part de vos besoins ou questions concernant les données et la classification NACRE, je suis ici pour vous aider.",
+      "hash": "91087393",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757089823.6430447
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 156. Vous êtes de retour après un court instant, avec trois fichiers en mémoire et vos demandes d'introduction récentes bien notées. N'hésitez pas à me faire part de vos besoins ou questions pour cette session.",
+      "hash": "12678c70",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757089825.3845005
+    }
+  ],
+  "user_preferences": {},
+  "created_at": 1757064652.2301354,
+  "updated_at": 1757089825.3871844
+}
