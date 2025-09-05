@@ -13,8 +13,19 @@ class Classifier:
     def __init__(self):
         self.api_key = settings.openai_api_key
         self.model = GPT5_MODELS.get("classification", "gpt-4o-mini")
-        self.client = OpenAI(api_key=self.api_key) if self.api_key else None
+        self.client = None
         self.gpt5_params = GPT5_PARAMS.get("classification", {})
+        
+        # Try to initialize OpenAI client safely
+        if self.api_key:
+            try:
+                self.client = OpenAI(api_key=self.api_key)
+                print(f"✅ OpenAI classifier initialized successfully with model: {self.model}")
+            except Exception as e:
+                print(f"❌ Failed to initialize OpenAI classifier: {e}")
+                self.client = None
+        else:
+            print("⚠️ No OpenAI API key configured - using fallback classification")
 
     def classify(
         self,

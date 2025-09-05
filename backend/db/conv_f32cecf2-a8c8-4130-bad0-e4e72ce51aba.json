@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "processed_rows": 40,
+  "total_rows": 40,
+  "stats": {
+    "skipped_empty_label": 0,
+    "errors": 0,
+    "total_processed": 40,
+    "processing_time": "1.08s",
+    "average_rate": "37.0 items/sec",
+    "agents_used": "8 agents",
+    "parallel_processing": true
+  }
+}

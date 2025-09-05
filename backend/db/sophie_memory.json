@@ -1,0 +1,1 @@
+{"created_at": 1757091041.799237, "events": [{"ts": 1757091041.7992494, "type": "conversion_completed", "data": {"conversion_id": "f32cecf2-a8c8-4130-bad0-e4e72ce51aba", "items_processed": 40, "processing_time": "1.1s", "average_rate": "37.0 items/sec", "parallel_processing": true, "agents_used": 8}}], "chat": []}

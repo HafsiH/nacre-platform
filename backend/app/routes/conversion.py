@@ -667,10 +667,35 @@ def clear_conversion_history():
 def get_status(conversion_id: str):
     try:
         print(f"🔍 Getting status for conversion: {conversion_id}")
+        
+        # Check if file exists first
+        import os
+        file_path = os.path.join(settings.storage_dir, "db", f"conv_{conversion_id}.json")
+        print(f"📂 Looking for file: {file_path}")
+        
+        if not os.path.exists(file_path):
+            print(f"❌ Conversion file not found: {file_path}")
+            # Return a default "failed" status instead of 404
+            return ConversionStatus(
+                conversion_id=conversion_id,
+                upload_id="unknown",
+                total_rows=0,
+                processed_rows=0,
+                status="failed",
+                stats={"error": "Conversion file not found - background task may have failed"}
+            )
+        
         conv = get_conversion(conversion_id)
         if not conv:
-            print(f"❌ Conversion not found: {conversion_id}")
-            raise HTTPException(status_code=404, detail=f"Conversion introuvable: {conversion_id}")
+            print(f"❌ Conversion data empty or corrupted: {conversion_id}")
+            return ConversionStatus(
+                conversion_id=conversion_id,
+                upload_id="unknown", 
+                total_rows=0,
+                processed_rows=0,
+                status="failed",
+                stats={"error": "Conversion data corrupted"}
+            )
         
         print(f"✅ Found conversion: status={conv.get('status')}, processed={conv.get('processed_rows', 0)}/{conv.get('total_rows', 0)}")
         return ConversionStatus(
@@ -681,13 +706,19 @@ def get_status(conversion_id: str):
             status=conv.get("status", "unknown"),
             stats=conv.get("stats", {}),
         )
-    except HTTPException:
-        raise
     except Exception as e:
         print(f"❌ Error getting conversion status: {e}")
         import traceback
         traceback.print_exc()
-        raise HTTPException(status_code=500, detail=f"Erreur serveur: {str(e)}")
+        # Return a failed status instead of 500 error
+        return ConversionStatus(
+            conversion_id=conversion_id,
+            upload_id="unknown",
+            total_rows=0,
+            processed_rows=0,
+            status="failed",
+            stats={"error": f"Server error: {str(e)}"}
+        )
 
 
 @router.get("/{conversion_id}/rows", response_model=ConversionResult)
