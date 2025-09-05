@@ -1,0 +1,6 @@
+label,code_nacre,fournisseur,compte,montant,confiance
+"Fournitures de bureau","AB.01","Office Depot","6061",150.50,95
+"Logiciel Microsoft Office","IA.31","Microsoft","6067",299.99,90
+"Formation Excel","BE.11","Formation Plus","62571",500.00,85
+"Maintenance serveur","IA.21","Tech Support","6064",1200.00,88
+"Papeterie","AB.01","Papeterie Pro","6061",75.25,92
