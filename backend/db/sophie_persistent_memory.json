@@ -1,39 +1,7 @@
 {
-  "session_count": 159,
-  "last_session": 1757090297.5039687,
+  "session_count": 163,
+  "last_session": 1757090719.2264977,
   "user_interactions": [
-    {
-      "type": "introduction_request",
-      "details": {
-        "success": true,
-        "variation_id": "ad454c23"
-      },
-      "timestamp": 1757077792.9217303
-    },
-    {
-      "type": "introduction_request",
-      "details": {
-        "success": true,
-        "variation_id": "e8f77b9a"
-      },
-      "timestamp": 1757079250.2075324
-    },
-    {
-      "type": "introduction_request",
-      "details": {
-        "success": true,
-        "variation_id": "6dd4ff5b"
-      },
-      "timestamp": 1757079250.6416278
-    },
-    {
-      "type": "introduction_request",
-      "details": {
-        "success": true,
-        "variation_id": "b2086923"
-      },
-      "timestamp": 1757079250.9498289
-    },
     {
       "type": "introduction_request",
       "details": {
@@ -401,6 +369,38 @@
         "variation_id": "94eb3735"
       },
       "timestamp": 1757090299.7243257
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "885c84ee"
+      },
+      "timestamp": 1757090426.7028892
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "52b38bee"
+      },
+      "timestamp": 1757090427.932738
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "1414faca"
+      },
+      "timestamp": 1757090719.2066393
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "d08b126b"
+      },
+      "timestamp": 1757090720.815568
     }
   ],
   "file_memory": {
@@ -416,7 +416,7 @@
       "dict_mtime": 1757066865.9997454,
       "source": "loaded"
     },
-    "document_access": "<app.services.document_access.DocumentAccess object at 0x0000029ACD33EE40>"
+    "document_access": "<app.services.document_access.DocumentAccess object at 0x0000016340F6CD70>"
   },
   "system_context": {
     "sophie_status": {
@@ -425,34 +425,10 @@
       "events": 0,
       "enabled": true
     },
-    "timestamp": 1757090297.5039506
+    "timestamp": 1757090719.2264884
   },
   "learning_history": [],
   "introduction_variations": [
-    {
-      "text": "Bonjour, et bienvenue de nouveau dans votre session 140. Étant donné que vous êtes de retour immédiatement après votre dernière interaction, je suis prête à vous assister avec les fichiers disponibles et les fonctionnalités en cours. N'hésitez pas à me faire part de vos besoins ou questions pour que nous puissions avancer ensemble.",
-      "hash": "047ed589",
-      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
-      "generated_at": 1757080810.5258613
-    },
-    {
-      "text": "Bonjour, et bienvenue à votre session 141. Vous êtes de retour parmi nous, et toutes vos données sont prêtes pour une exploration approfondie. N'hésitez pas à me faire part de vos besoins ou questions pour que nous puissions avancer ensemble efficacement.",
-      "hash": "7808748e",
-      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
-      "generated_at": 1757080814.054866
-    },
-    {
-      "text": "Bonjour, et bienvenue à votre session numéro 142. Vous êtes de retour après un court instant, avec trois fichiers en mémoire et vos embeddings complètement prêts à l'emploi. Je vous invite à me faire part de vos besoins ou questions afin que nous puissions avancer ensemble.",
-      "hash": "c01ea30a",
-      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
-      "generated_at": 1757080814.6042893
-    },
-    {
-      "text": "Bonjour, et bienvenue à nouveau. Vous êtes de retour pour cette session numéro 143, où nous avons trois fichiers en mémoire et une bonne progression dans les embeddings. Je vous invite à explorer vos besoins ou questions, afin que nous puissions avancer ensemble efficacement.",
-      "hash": "df627b00",
-      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
-      "generated_at": 1757080816.0592566
-    },
     {
       "text": "Bonjour, et bienvenue à votre session 144. Vous êtes de retour après une courte pause et avez trois fichiers en mémoire, ce qui témoigne de votre utilisation régulière. N'hésitez pas à me faire part de vos questions ou besoins concernant les données disponibles, je suis ici pour vous aider.",
       "hash": "70f70ed4",
@@ -548,9 +524,33 @@
       "hash": "94eb3735",
       "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
       "generated_at": 1757090299.7217455
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 160. Vous êtes de retour après un court instant, et j'observe que vous avez trois fichiers en mémoire ainsi qu'un dictionnaire NACRE prêt à l'emploi. N'hésitez pas à me faire part de vos questions ou besoins pour optimiser votre expérience.",
+      "hash": "885c84ee",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757090426.7002916
+    },
+    {
+      "text": "Bonjour, je vous souhaite la bienvenue dans cette nouvelle session. Vous êtes de retour immédiatement après votre dernière interaction, et vos fichiers sont disponibles pour consultation. N'hésitez pas à me faire part de vos besoins spécifiques afin que je puisse vous assister au mieux.",
+      "hash": "52b38bee",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757090427.928892
+    },
+    {
+      "text": "Bonjour et bienvenue à votre session 162. Vous êtes de retour après une courte pause, et je suis ravi de constater que vous avez trois fichiers en mémoire, prêts à être explorés. N'hésitez pas à me faire part de vos questions ou besoins spécifiques pour que nous puissions avancer ensemble.",
+      "hash": "1414faca",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757090719.1991477
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 163. Vous êtes de retour parmi nous, et vos fichiers ainsi que le dictionnaire NACRE sont prêts à être utilisés pour vos analyses. N'hésitez pas à me faire part de vos questions ou de vos besoins spécifiques pour optimiser votre expérience.",
+      "hash": "d08b126b",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757090720.8080525
     }
   ],
   "user_preferences": {},
   "created_at": 1757064652.2301354,
-  "updated_at": 1757090299.7245555
+  "updated_at": 1757090720.8163598
 }

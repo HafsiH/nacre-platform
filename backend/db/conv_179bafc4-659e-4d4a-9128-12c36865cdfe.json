@@ -1,0 +1,54 @@
+{
+  "id": "179bafc4-659e-4d4a-9128-12c36865cdfe",
+  "upload_id": "db39161c-8a51-4661-8335-224a3bf6777d",
+  "status": "processing",
+  "processed_rows": 1,
+  "total_rows": 40,
+  "stats": {
+    "skipped_empty_label": 0,
+    "errors": 0
+  },
+  "meta": {
+    "upload_id": "db39161c-8a51-4661-8335-224a3bf6777d",
+    "label_column": "Libellé ligne DP / EJ",
+    "context_columns": [],
+    "max_rows": 200,
+    "batch_size": 25
+  },
+  "rows": [
+    {
+      "row_index": 12,
+      "label_raw": "5335748-403073-MOURRAIN-17/11/2023",
+      "chosen_code": "XD.03",
+      "chosen_category": "LOCATION DE TERRAIN NU",
+      "confidence": 60,
+      "alternatives": [
+        {
+          "code": "XD.03",
+          "category": "LOCATION DE TERRAIN NU",
+          "keywords": []
+        },
+        {
+          "code": "BG.05",
+          "category": "ACHAT DE MOBILIER URBAIN",
+          "keywords": []
+        },
+        {
+          "code": "EC.25",
+          "category": "ORGANISATION DE CONCOURS",
+          "keywords": []
+        }
+      ],
+      "explanation": "Fallback Agent 3",
+      "evolution_summary": null,
+      "rationale": []
+    }
+  ]
+}
+      ],
+      "explanation": "Fallback Agent 2",
+      "evolution_summary": null,
+      "rationale": []
+    }
+  ]
+}

@@ -53,12 +53,18 @@ def update_conversion(conv_id: str, patch: dict[str, Any]) -> dict[str, Any]:
 
 
 def append_conversion_row(conv_id: str, row_rec: dict[str, Any]):
-    rec = _get_json(f"conv_{conv_id}.json") or {}
-    rows = rec.get("rows", [])
-    rows.append(row_rec)
-    rec["rows"] = rows
-    rec["processed_rows"] = len(rows)
-    _put_json(f"conv_{conv_id}.json", rec)
+    try:
+        rec = _get_json(f"conv_{conv_id}.json") or {}
+        rows = rec.get("rows", [])
+        rows.append(row_rec)
+        rec["rows"] = rows
+        rec["processed_rows"] = len(rows)
+        _put_json(f"conv_{conv_id}.json", rec)
+    except Exception as e:
+        print(f"❌ Error appending row to conversion {conv_id}: {e}")
+        import traceback
+        traceback.print_exc()
+        raise
 
 
 def get_conversion(conv_id: str) -> dict[str, Any] | None:
@@ -70,14 +76,34 @@ def _db_path(name: str) -> str:
 
 
 def _put_json(name: str, obj: dict[str, Any]):
-    with open(_db_path(name), "w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
+    try:
+        ensure_dirs()  # Make sure directories exist
+        path = _db_path(name)
+        print(f"💾 Writing JSON to: {path}")
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(obj, f, ensure_ascii=False, indent=2)
+        print(f"✅ Successfully wrote JSON: {name}")
+    except Exception as e:
+        print(f"❌ Error writing JSON {name}: {e}")
+        import traceback
+        traceback.print_exc()
+        raise
 
 
 def _get_json(name: str) -> dict[str, Any] | None:
-    path = _db_path(name)
-    if not os.path.exists(path):
+    try:
+        path = _db_path(name)
+        if not os.path.exists(path):
+            print(f"📂 JSON file not found: {path}")
+            return None
+        print(f"📖 Reading JSON from: {path}")
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        print(f"✅ Successfully read JSON: {name}")
+        return data
+    except Exception as e:
+        print(f"❌ Error reading JSON {name}: {e}")
+        import traceback
+        traceback.print_exc()
         return None
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
 

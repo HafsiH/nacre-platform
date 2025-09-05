@@ -1,0 +1,55 @@
+{
+  "id": "11b9680a-2b2a-4ccf-b835-064e819ee809",
+  "upload_id": "93bbdcbe-4f28-4900-9e33-045827d35c3b",
+  "status": "processing",
+  "processed_rows": 1,
+  "total_rows": 40,
+  "stats": {
+    "skipped_empty_label": 0,
+    "errors": 0
+  },
+  "meta": {
+    "upload_id": "93bbdcbe-4f28-4900-9e33-045827d35c3b",
+    "label_column": "Libellé ligne DP / EJ",
+    "context_columns": [
+      "Compte comptable",
+      "Code du fournisseur",
+      "Nom du fournisseur",
+      "Type de fournisseur"
+    ],
+    "max_rows": 200,
+    "batch_size": 25
+  },
+  "rows": [
+    {
+      "row_index": 0,
+      "label_raw": "Moniteur 27\" - Dell P2723D",
+      "chosen_code": "XA.21",
+      "chosen_category": "REMBOURSEMENT FRAIS DE MISSIONS FRANCE METROPOLITAINE Personnalites exterieures",
+      "confidence": 60,
+      "alternatives": [
+        {
+          "code": "XA.21",
+          "category": "REMBOURSEMENT FRAIS DE MISSIONS FRANCE METROPOLITAINE Personnalites exterieures",
+          "keywords": []
+        },
+        {
+          "code": "XA.22",
+          "category": "REMBOURSEMENT FRAIS DE MISSIONS A L'ETRANGER  Personnalites exterieures",
+          "keywords": []
+        },
+        {
+          "code": "XA.23",
+          "category": "AUTRES REMBOURSEMENTS FRAIS DE MISSIONS  Personnalites exterieures",
+          "keywords": []
+        }
+      ],
+      "explanation": "Fallback Agent 1",
+      "evolution_summary": null,
+      "rationale": []
+    }
+  ]
+}
+    }
+  ]
+}

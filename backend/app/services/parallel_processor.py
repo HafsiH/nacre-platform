@@ -52,7 +52,13 @@ class ParallelProcessor:
         
         try:
             # Chaque agent a son propre classifier pour éviter les conflits
-            clf = get_classifier()
+            try:
+                clf = get_classifier()
+                print(f"🤖 Agent {worker_id} classifier initialized successfully")
+            except Exception as clf_error:
+                print(f"❌ Agent {worker_id} failed to initialize classifier: {clf_error}")
+                # Use fallback mode without classifier
+                clf = None
             
             print(f"🤖 Agent {worker_id} traite {len(task.items)} éléments (Task {task.task_id})")
             
@@ -61,8 +67,32 @@ class ParallelProcessor:
             batch_contexts = [item.get("context", "") for item in task.items]
             
             try:
-                # Classification par batch pour l'efficacité
-                batch_results = clf.classify_batch(batch_items, batch_contexts, top_k=3)
+                if clf is not None:
+                    # Classification par batch pour l'efficacité
+                    batch_results = clf.classify_batch(batch_items, batch_contexts, top_k=3)
+                else:
+                    # Fallback: use dictionary-based matching
+                    from ..services.nacre_dict import get_nacre_dict
+                    nacre_dict = get_nacre_dict()
+                    batch_results = []
+                    for item in batch_items:
+                        candidates = nacre_dict.candidates(item, top_k=3)
+                        if candidates:
+                            batch_results.append({
+                                "chosen_code": candidates[0].code,
+                                "chosen_category": candidates[0].category,
+                                "confidence": 70,  # Default confidence for dictionary matching
+                                "alternatives": [{"code": c.code, "category": c.category, "keywords": c.keywords} for c in candidates[:3]],
+                                "explanation": "Classification basée sur le dictionnaire NACRE (sans IA)"
+                            })
+                        else:
+                            batch_results.append({
+                                "chosen_code": "XX.XX",
+                                "chosen_category": "Non classifié",
+                                "confidence": 10,
+                                "alternatives": [],
+                                "explanation": "Aucune correspondance trouvée dans le dictionnaire"
+                            })
                 
                 # Petit délai pour rendre le progrès visible (pour debug)
                 time.sleep(0.5)
