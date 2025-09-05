@@ -1,31 +1,7 @@
 {
-  "session_count": 156,
-  "last_session": 1757089823.65787,
+  "session_count": 159,
+  "last_session": 1757090297.5039687,
   "user_interactions": [
-    {
-      "type": "introduction_request",
-      "details": {
-        "success": true,
-        "variation_id": "3d817436"
-      },
-      "timestamp": 1757077719.6751175
-    },
-    {
-      "type": "introduction_request",
-      "details": {
-        "success": true,
-        "variation_id": "1a00f7a3"
-      },
-      "timestamp": 1757077721.7501068
-    },
-    {
-      "type": "introduction_request",
-      "details": {
-        "success": true,
-        "variation_id": "d7341640"
-      },
-      "timestamp": 1757077790.0189674
-    },
     {
       "type": "introduction_request",
       "details": {
@@ -401,6 +377,30 @@
         "variation_id": "12678c70"
       },
       "timestamp": 1757089825.3869936
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "3d85cd5d"
+      },
+      "timestamp": 1757089897.3792005
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "f25b8011"
+      },
+      "timestamp": 1757089898.6101184
+    },
+    {
+      "type": "introduction_request",
+      "details": {
+        "success": true,
+        "variation_id": "94eb3735"
+      },
+      "timestamp": 1757090299.7243257
     }
   ],
   "file_memory": {
@@ -425,28 +425,10 @@
       "events": 0,
       "enabled": true
     },
-    "timestamp": 1757089823.6578655
+    "timestamp": 1757090297.5039506
   },
   "learning_history": [],
   "introduction_variations": [
-    {
-      "text": "Bonjour, et bienvenue à nouveau dans votre session NACRE. Vous êtes de retour immédiatement après votre dernière interaction, ce qui témoigne de votre engagement dans l'exploration de nos fonctionnalités. N'hésitez pas à me faire part de vos questions ou de vos besoins spécifiques pour cette session.",
-      "hash": "f70ba2dc",
-      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
-      "generated_at": 1757080054.0456204
-    },
-    {
-      "text": "Bonjour et bienvenue à votre session 138. Je constate que vous êtes de retour immédiatement après votre dernière interaction, ce qui témoigne de votre engagement envers l'utilisation de nos ressources. N'hésitez pas à me faire part de vos questions ou de vos besoins concernant les fichiers et le dictionnaire NACRE disponibles.",
-      "hash": "d8355df2",
-      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
-      "generated_at": 1757080055.5370455
-    },
-    {
-      "text": "Bonjour, et bienvenue à nouveau. Vous êtes de retour pour cette session 139, avec vos fichiers déjà chargés et les embeddings prêts à l'emploi. Je suis à votre disposition pour toute question ou pour explorer davantage le contenu disponible.",
-      "hash": "cea2c29d",
-      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
-      "generated_at": 1757080807.3420324
-    },
     {
       "text": "Bonjour, et bienvenue de nouveau dans votre session 140. Étant donné que vous êtes de retour immédiatement après votre dernière interaction, je suis prête à vous assister avec les fichiers disponibles et les fonctionnalités en cours. N'hésitez pas à me faire part de vos besoins ou questions pour que nous puissions avancer ensemble.",
       "hash": "047ed589",
@@ -548,9 +530,27 @@
       "hash": "12678c70",
       "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
       "generated_at": 1757089825.3845005
+    },
+    {
+      "text": "Bonjour, et bienvenue à votre session 157. Je constate que vous êtes de retour immédiatement après votre dernière interaction, ce qui témoigne de votre engagement envers notre plateforme. N'hésitez pas à me faire part de vos questions ou besoins concernant les fichiers en mémoire ou l'utilisation du dictionnaire NACRE.",
+      "hash": "3d85cd5d",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757089897.3747768
+    },
+    {
+      "text": "Bonjour et bienvenue à nouveau. Vous êtes de retour pour cette session 158, avec vos fichiers et données déjà chargés, ce qui facilitera notre interaction. N'hésitez pas à me faire part de vos besoins ou questions concernant les fonctionnalités disponibles.",
+      "hash": "f25b8011",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757089898.6063752
+    },
+    {
+      "text": "Bonjour et bienvenue de nouveau. Vous êtes de retour après une brève pause, et je suis à votre disposition pour explorer les fichiers en mémoire, notamment le dictionnaire NACRE qui est prêt à l'emploi. N'hésitez pas à me faire part de vos questions ou des sujets que vous souhaitez aborder.",
+      "hash": "94eb3735",
+      "context_summary": "Utilisateur de retour après 0 minutes | 3 fichiers en mémoire | 5 interactions récentes",
+      "generated_at": 1757090299.7217455
     }
   ],
   "user_preferences": {},
   "created_at": 1757064652.2301354,
-  "updated_at": 1757089825.3871844
+  "updated_at": 1757090299.7245555
 }

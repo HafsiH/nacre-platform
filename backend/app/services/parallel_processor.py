@@ -64,6 +64,9 @@ class ParallelProcessor:
                 # Classification par batch pour l'efficacité
                 batch_results = clf.classify_batch(batch_items, batch_contexts, top_k=3)
                 
+                # Petit délai pour rendre le progrès visible (pour debug)
+                time.sleep(0.5)
+                
                 for i, (item, result) in enumerate(zip(task.items, batch_results)):
                     # Créer l'objet RowClassification
                     rc = RowClassification(
@@ -163,16 +166,16 @@ class ParallelProcessor:
         if total_items == 0:
             return []
         
-        # Configuration basée sur la vitesse
+        # Configuration basée sur la vitesse - réduire la taille des tâches pour plus de mises à jour
         if speed_multiplier == 1:  # 1x
             num_workers = 2
-            items_per_task = 5
+            items_per_task = 3  # Réduire pour plus de mises à jour fréquentes
         elif speed_multiplier == 2:  # 2x
             num_workers = 4
-            items_per_task = 8
+            items_per_task = 4  # Réduire pour plus de mises à jour fréquentes
         else:  # 4x
             num_workers = 6
-            items_per_task = 12
+            items_per_task = 6  # Réduire pour plus de mises à jour fréquentes
         
         print(f"🚀 Démarrage traitement parallèle: {num_workers} agents, {items_per_task} éléments/tâche")
         

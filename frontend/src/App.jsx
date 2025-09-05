@@ -105,38 +105,45 @@ export default function App() {
       }
     }
     // Progressive polling: start fast, then slow down
-    let pollInterval = 1000 // Start at 1 second
-    const maxInterval = 5000 // Max 5 seconds
+    let pollInterval = 500 // Start at 0.5 seconds for faster updates
+    const maxInterval = 2000 // Max 2 seconds
     let pollCount = 0
     
     const progressivePoll = async () => {
-    await poll()
-      pollCount++
-      
-      // Increase interval after first few polls
-      if (pollCount > 3 && pollInterval < maxInterval) {
-        pollInterval = Math.min(pollInterval * 1.2, maxInterval)
-      }
-      
-      const sres = await fetch(`/conversions/${id}`)
-      const sdata = await sres.json()
-      setConversion(sdata)
-      
-      if (sdata.status !== 'completed') {
-        setTimeout(progressivePoll, pollInterval)
-      } else {
-        // Fetch final results
-        const rowsRes = await fetch(`/conversions/${id}/rows?limit=1000`)
-        const rowsData = await rowsRes.json()
-        setRows(rowsData.rows || [])
-        // Update columns from conversion results if available
-        if (rowsData.rows && rowsData.rows.length > 0) {
-          const firstRow = rowsData.rows[0]
-          const conversionColumns = Object.keys(firstRow).filter(key => key !== 'id')
-          setColumns(conversionColumns)
+      try {
+        pollCount++
+        
+        // Increase interval after first few polls
+        if (pollCount > 3 && pollInterval < maxInterval) {
+          pollInterval = Math.min(pollInterval * 1.2, maxInterval)
         }
-        // Recharger la liste des conversions
-        loadConversions()
+        
+        // Fetch conversion status
+        const sres = await fetch(`/conversions/${id}`)
+        const sdata = await sres.json()
+        
+        console.log(`Poll ${pollCount}: Status=${sdata.status}, Progress=${sdata.processed_rows}/${sdata.total_rows}`)
+        setConversion(sdata)
+        
+        if (sdata.status !== 'completed' && sdata.status !== 'error') {
+          setTimeout(progressivePoll, pollInterval)
+        } else {
+          // Fetch final results
+          const rowsRes = await fetch(`/conversions/${id}/rows?limit=1000`)
+          const rowsData = await rowsRes.json()
+          setRows(rowsData.rows || [])
+          // Update columns from conversion results if available
+          if (rowsData.rows && rowsData.rows.length > 0) {
+            const firstRow = rowsData.rows[0]
+            const conversionColumns = Object.keys(firstRow).filter(key => key !== 'id')
+            setColumns(conversionColumns)
+          }
+          // Recharger la liste des conversions
+          loadConversions()
+        }
+      } catch (error) {
+        console.error('Polling error:', error)
+        setTimeout(progressivePoll, pollInterval)
       }
     }
     

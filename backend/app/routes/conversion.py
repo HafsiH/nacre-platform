@@ -438,7 +438,8 @@ def _run_conversion_parallel(conv_id: str, upload_path: str, payload: Conversion
             progress_pct = int((items_processed / total_items) * 100) if total_items > 0 else 0
             rate = items_processed / elapsed_time if elapsed_time > 0 else 0
             
-            print(f"📊 Progrès: {items_processed}/{total_items} éléments traités ({progress_pct}%) - {rate:.1f} items/sec")
+            print(f"📊 PROGRESS UPDATE: {items_processed}/{total_items} éléments traités ({progress_pct}%) - {rate:.1f} items/sec")
+            print(f"🔄 Updating conversion {conv_id} with processed_rows={items_processed}, total_rows={total_items}")
             
             update_conversion(
                 conv_id, 
