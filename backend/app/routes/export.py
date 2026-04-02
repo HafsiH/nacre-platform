@@ -12,6 +12,23 @@ from ..services.xlsx_io import iterate_xlsx
 router = APIRouter()
 
 
+def _normalize_delimiter(delimiter: str | None) -> str:
+    if not delimiter:
+        return ","
+    value = str(delimiter)
+    return value if value else ","
+
+
+def _normalize_filename_prefix(prefix: str | None) -> str | None:
+    if prefix is None:
+        return None
+    cleaned = str(prefix).strip()
+    if not cleaned:
+        return None
+    cleaned = cleaned.replace("/", "_").replace("\\", "_").replace(" ", "_")
+    return cleaned or None
+
+
 @router.post("", response_class=StreamingResponse)
 def export_csv(payload: ExportCreate):
     conv = get_conversion(payload.conversion_id)
@@ -30,6 +47,7 @@ def export_csv(payload: ExportCreate):
     # Prepare CSV output in memory
     buf = StringIO()
     writer = None
+    delimiter = _normalize_delimiter(payload.delimiter)
 
     # Iterate original CSV and write selected columns + classification
     iterator = None
@@ -55,11 +73,15 @@ def export_csv(payload: ExportCreate):
         if writer is None:
             # Initialize with discovered headers (stable order: input cols then cls)
             headers = list(out.keys())
-            writer = csv.DictWriter(buf, fieldnames=headers)
+            writer = csv.DictWriter(buf, fieldnames=headers, delimiter=delimiter)
             writer.writeheader()
         writer.writerow(out)
 
-    filename = f"export_{payload.conversion_id}.csv"
+    prefix = _normalize_filename_prefix(payload.filename_prefix)
+    if prefix:
+        filename = f"{prefix}_{payload.conversion_id}.csv"
+    else:
+        filename = f"export_{payload.conversion_id}.csv"
     buf.seek(0)
     return StreamingResponse(
         buf,

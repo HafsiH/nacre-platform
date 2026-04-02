@@ -59,3 +59,5 @@ class ExportCreate(BaseModel):
     columns_to_keep: List[str] = []
     include_classification: bool = True
     classification_prefix: str = "nacre_"  # nacre_code, nacre_category, nacre_confidence
+    delimiter: str = ","
+    filename_prefix: Optional[str] = None
